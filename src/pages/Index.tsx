@@ -148,7 +148,7 @@ const Index = () => {
               </Button>
             </Link>
             <Link to="/resources">
-              <Button size="lg" variant="outline" className="gap-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+              <Button size="lg" variant="secondary" className="gap-2">
                 Browse Resources <BookOpen className="h-4 w-4" />
               </Button>
             </Link>
