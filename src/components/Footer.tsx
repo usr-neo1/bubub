@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, Github, Twitter } from 'lucide-react';
+import { BookOpen, YouTube, LinkedIn } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2">
               <BookOpen className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">Roadmaporium</span>
+              <span className="text-xl font-bold">Street Smart Skills</span>
             </Link>
             <p className="mt-4 text-muted-foreground">
               Your complete guide to professional and personal skills development. Find roadmaps, resources, and expert guidance.
@@ -42,15 +42,15 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-3">Connect</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-                  <Twitter className="h-4 w-4" />
-                  <span>Twitter</span>
+                <a href="https://youtube.com/@streetsmartskills?si=tMBJKyYM10f3Gb61" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+                  <YouTube className="h-4 w-4" />
+                  <span>YouTube</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-                  <Github className="h-4 w-4" />
-                  <span>GitHub</span>
+                <a href="https://www.linkedin.com/company/street-smart-skills/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
+                  <LinkedIn className="h-4 w-4" />
+                  <span>LinkedIn</span>
                 </a>
               </li>
             </ul>
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Roadmaporium. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Street Smart Skills. All rights reserved.</p>
         </div>
       </div>
     </footer>
