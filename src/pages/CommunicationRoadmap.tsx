@@ -15,7 +15,8 @@ import {
   Globe,
   Youtube,
   Smile,
-  Award
+  Award,
+  ExternalLink
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -26,6 +27,7 @@ import {
   TabsTrigger 
 } from '@/components/ui/tabs';
 import { useToast } from "@/components/ui/use-toast";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const CommunicationRoadmap = () => {
   const { toast } = useToast();
@@ -83,6 +85,7 @@ const CommunicationRoadmap = () => {
                     <a href="#phase2" className="text-muted-foreground hover:text-foreground">Phase 2: Advanced Skills</a>
                     <a href="#phase3" className="text-muted-foreground hover:text-foreground">Phase 3: Application</a>
                     <a href="#resources" className="text-muted-foreground hover:text-foreground">Key Resources</a>
+                    <a href="#related" className="text-muted-foreground hover:text-foreground">Related Roadmaps</a>
                   </nav>
                 </div>
                 <Separator />
@@ -101,20 +104,22 @@ const CommunicationRoadmap = () => {
                 <div className="space-y-4">
                   <h3 className="font-medium">Related Roadmaps</h3>
                   <div className="flex flex-col space-y-2 text-sm">
-                    <Button 
-                      variant="ghost" 
-                      className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
-                      onClick={handleComingSoon}
-                    >
-                      Public Speaking 🎤
-                    </Button>
-                    <Button 
-                      variant="ghost" 
-                      className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
-                      onClick={handleComingSoon}
-                    >
-                      Business Negotiation 🤝
-                    </Button>
+                    <Link to="/roadmaps/communication/public-speaking">
+                      <Button 
+                        variant="ghost" 
+                        className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
+                      >
+                        Public Speaking 🎤
+                      </Button>
+                    </Link>
+                    <Link to="/roadmaps/communication/negotiation">
+                      <Button 
+                        variant="ghost" 
+                        className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
+                      >
+                        Business Negotiation 🤝
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -435,6 +440,62 @@ const CommunicationRoadmap = () => {
                             </ul>
                           </div>
                         </div>
+                      </div>
+                    </div>
+
+                    {/* Related Roadmaps */}
+                    <div id="related" className="scroll-mt-20">
+                      <h2 className="text-2xl font-bold mb-6">Related Roadmaps 🔄</h2>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <Link to="/roadmaps/communication/public-speaking" className="no-underline">
+                          <Card className="h-full hover:shadow-md transition-all border-communication/20">
+                            <CardHeader>
+                              <div className="flex justify-between items-start">
+                                <div className="p-2 rounded-full bg-muted">
+                                  <MessageSquare className="h-5 w-5 text-communication" />
+                                </div>
+                              </div>
+                              <CardTitle className="mt-4">Public Speaking 🎤</CardTitle>
+                              <CardDescription>
+                                Master the art of public speaking with techniques for engaging presentations,
+                                overcoming stage fright, and captivating your audience.
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="flex justify-between items-center">
+                                <span className="text-sm text-muted-foreground">Estimated Time: 8 Weeks</span>
+                                <Button size="sm" variant="ghost" className="gap-1">
+                                  View Roadmap <ExternalLink className="h-3 w-3" />
+                                </Button>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
+
+                        <Link to="/roadmaps/communication/negotiation" className="no-underline">
+                          <Card className="h-full hover:shadow-md transition-all border-communication/20">
+                            <CardHeader>
+                              <div className="flex justify-between items-start">
+                                <div className="p-2 rounded-full bg-muted">
+                                  <MessageSquare className="h-5 w-5 text-communication" />
+                                </div>
+                              </div>
+                              <CardTitle className="mt-4">Business Negotiation 🤝</CardTitle>
+                              <CardDescription>
+                                Develop professional negotiation skills for business contexts, including deal-making,
+                                conflict resolution, and win-win strategies.
+                              </CardDescription>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="flex justify-between items-center">
+                                <span className="text-sm text-muted-foreground">Estimated Time: 10 Weeks</span>
+                                <Button size="sm" variant="ghost" className="gap-1">
+                                  View Roadmap <ExternalLink className="h-3 w-3" />
+                                </Button>
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </Link>
                       </div>
                     </div>
                   </div>
