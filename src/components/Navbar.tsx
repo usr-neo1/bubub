@@ -24,7 +24,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <BookOpen className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold">Roadmaporium</span>
+            <span className="text-xl font-bold">Street Smart Skills</span>
           </Link>
         </div>
 
