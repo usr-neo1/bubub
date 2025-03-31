@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BookOpen, YouTube, LinkedIn } from 'lucide-react';
+import { BookOpen, Youtube, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -43,13 +43,13 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a href="https://youtube.com/@streetsmartskills?si=tMBJKyYM10f3Gb61" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-                  <YouTube className="h-4 w-4" />
+                <Youtube />
                   <span>YouTube</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/company/street-smart-skills/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground">
-                  <LinkedIn className="h-4 w-4" />
+                <Linkedin />
                   <span>LinkedIn</span>
                 </a>
               </li>
