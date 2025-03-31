@@ -13,7 +13,10 @@ import {
   Download,
   ChevronLeft,
   ChevronRight,
-  Youtube
+  Youtube,
+  Heart,
+  Award,
+  Sparkles
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -23,6 +26,7 @@ import {
   TabsList, 
   TabsTrigger 
 } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
 
 const LanguagesRoadmap = () => {
   return (
@@ -36,7 +40,7 @@ const LanguagesRoadmap = () => {
                 <Globe className="h-4 w-4" />
                 <span>Languages</span>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Language Learning Pathways</h1>
+              <h1 className="text-4xl font-bold mb-4">Language Learning Pathways 🗣️</h1>
               <div className="flex flex-wrap gap-3 mb-4">
                 <Badge variant="outline">Multiple Levels</Badge>
                 <Badge variant="outline">Various Timeframes</Badge>
@@ -44,7 +48,7 @@ const LanguagesRoadmap = () => {
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Comprehensive roadmaps for learning languages effectively, with structured paths 
-                for German, French, English, and more.
+                for German, French, English, and more. 🌍
               </p>
             </div>
             <div className="hidden md:block">
@@ -60,7 +64,7 @@ const LanguagesRoadmap = () => {
         <div className="container mx-auto max-w-5xl">
           <div className="space-y-12">
             <div className="text-center">
-              <h2 className="text-2xl font-bold mb-4">Choose Your Language Path</h2>
+              <h2 className="text-2xl font-bold mb-4">Choose Your Language Path ✨</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Select from our detailed language learning roadmaps to start your journey to fluency.
                 Each path is designed with a clear progression from beginner to advanced levels.
@@ -72,7 +76,9 @@ const LanguagesRoadmap = () => {
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-all">
                 <div className="h-40 bg-languages/10 flex items-center justify-center">
                   <div className="text-center p-4">
-                    <Globe className="h-16 w-16 text-languages mx-auto mb-2" />
+                    <div className="mx-auto mb-2 w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white">
+                      <span className="text-4xl">🇩🇪</span>
+                    </div>
                     <h3 className="text-xl font-medium">German</h3>
                   </div>
                 </div>
@@ -87,15 +93,15 @@ const LanguagesRoadmap = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Audio-focused learning</span>
+                      <span className="text-sm">Audio-focused learning 🎧</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Grammar fundamentals</span>
+                      <span className="text-sm">Grammar fundamentals 📚</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Cultural context</span>
+                      <span className="text-sm">Cultural context 🍺</span>
                     </div>
                   </div>
                   <Link to="/roadmaps/languages/german" className="w-full">
@@ -108,7 +114,9 @@ const LanguagesRoadmap = () => {
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-all">
                 <div className="h-40 bg-languages/10 flex items-center justify-center">
                   <div className="text-center p-4">
-                    <Globe className="h-16 w-16 text-languages mx-auto mb-2" />
+                    <div className="mx-auto mb-2 w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white">
+                      <span className="text-4xl">🇫🇷</span>
+                    </div>
                     <h3 className="text-xl font-medium">French</h3>
                   </div>
                 </div>
@@ -123,15 +131,15 @@ const LanguagesRoadmap = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Business vocabulary</span>
+                      <span className="text-sm">Business vocabulary 💼</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Pronunciation mastery</span>
+                      <span className="text-sm">Pronunciation mastery 🔊</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Professional contexts</span>
+                      <span className="text-sm">Professional contexts 🥐</span>
                     </div>
                   </div>
                   <Link to="/roadmaps/languages/french" className="w-full">
@@ -144,7 +152,9 @@ const LanguagesRoadmap = () => {
               <div className="border rounded-lg overflow-hidden hover:shadow-md transition-all">
                 <div className="h-40 bg-languages/10 flex items-center justify-center">
                   <div className="text-center p-4">
-                    <Globe className="h-16 w-16 text-languages mx-auto mb-2" />
+                    <div className="mx-auto mb-2 w-16 h-16 rounded-full overflow-hidden flex items-center justify-center bg-white">
+                      <span className="text-4xl">🇬🇧</span>
+                    </div>
                     <h3 className="text-xl font-medium">English</h3>
                   </div>
                 </div>
@@ -159,15 +169,15 @@ const LanguagesRoadmap = () => {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Advanced grammar</span>
+                      <span className="text-sm">Advanced grammar 📝</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Business English</span>
+                      <span className="text-sm">Business English 💻</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-languages" />
-                      <span className="text-sm">Presentation skills</span>
+                      <span className="text-sm">Presentation skills 🎤</span>
                     </div>
                   </div>
                   <Link to="/roadmaps/languages/english" className="w-full">
@@ -178,10 +188,10 @@ const LanguagesRoadmap = () => {
             </div>
             
             <div className="bg-muted p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Language Learning Resources</h3>
+              <h3 className="text-xl font-bold mb-4">Language Learning Resources 📚</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="space-y-2">
-                  <h4 className="font-medium">Apps</h4>
+                  <h4 className="font-medium">Apps 📱</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>Duolingo</li>
                     <li>Babbel</li>
@@ -190,7 +200,7 @@ const LanguagesRoadmap = () => {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium">Online Platforms</h4>
+                  <h4 className="font-medium">Online Platforms 💻</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>italki</li>
                     <li>Preply</li>
@@ -199,7 +209,7 @@ const LanguagesRoadmap = () => {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium">Books & Materials</h4>
+                  <h4 className="font-medium">Books & Materials 📕</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>Assimil Series</li>
                     <li>Teach Yourself Series</li>
@@ -208,7 +218,7 @@ const LanguagesRoadmap = () => {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-medium">Practice Techniques</h4>
+                  <h4 className="font-medium">Practice Techniques 🔄</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     <li>Language Exchange</li>
                     <li>Comprehensible Input</li>
@@ -220,7 +230,7 @@ const LanguagesRoadmap = () => {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-6">Language Learning Tips</h3>
+              <h3 className="text-xl font-bold mb-6">Language Learning Tips 💡</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="border p-6 rounded-lg">
                   <h4 className="font-medium mb-4">Effective Study Habits</h4>
@@ -228,21 +238,21 @@ const LanguagesRoadmap = () => {
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Consistency over intensity</span>
+                        <span className="font-medium text-foreground block mb-1">Consistency over intensity ⏱️</span>
                         Regular 20-minute sessions are more effective than occasional 3-hour marathons.
                       </p>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Mix learning methods</span>
+                        <span className="font-medium text-foreground block mb-1">Mix learning methods 🔄</span>
                         Combine apps, books, conversation practice, and media consumption.
                       </p>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Track your progress</span>
+                        <span className="font-medium text-foreground block mb-1">Track your progress 📊</span>
                         Keep a language journal to see how far you've come and stay motivated.
                       </p>
                     </li>
@@ -254,21 +264,21 @@ const LanguagesRoadmap = () => {
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Change your routine</span>
+                        <span className="font-medium text-foreground block mb-1">Change your routine 🔄</span>
                         If progress slows, try new learning methods or different content.
                       </p>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Focus on interests</span>
+                        <span className="font-medium text-foreground block mb-1">Focus on interests ❤️</span>
                         Study the language through topics you're passionate about.
                       </p>
                     </li>
                     <li className="flex gap-3">
                       <Check className="h-5 w-5 text-languages flex-shrink-0" />
                       <p className="text-sm text-muted-foreground">
-                        <span className="font-medium text-foreground block mb-1">Get feedback</span>
+                        <span className="font-medium text-foreground block mb-1">Get feedback 👂</span>
                         Work with tutors or language exchange partners to identify improvement areas.
                       </p>
                     </li>

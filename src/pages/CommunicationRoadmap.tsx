@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Separator } from '@/components/ui/separator';
@@ -14,7 +13,9 @@ import {
   ChevronLeft,
   ChevronRight,
   Globe,
-  Youtube
+  Youtube,
+  Smile,
+  Award
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
@@ -24,8 +25,19 @@ import {
   TabsList, 
   TabsTrigger 
 } from '@/components/ui/tabs';
+import { useToast } from "@/components/ui/use-toast";
 
 const CommunicationRoadmap = () => {
+  const { toast } = useToast();
+  
+  const handleComingSoon = () => {
+    toast({
+      title: "Coming Soon! 🚧",
+      description: "We're currently building this roadmap. Check back soon!",
+      duration: 3000,
+    });
+  };
+
   return (
     <Layout>
       {/* Header */}
@@ -37,7 +49,7 @@ const CommunicationRoadmap = () => {
                 <MessageSquare className="h-4 w-4" />
                 <span>Communication</span>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Interpersonal Communication Skills</h1>
+              <h1 className="text-4xl font-bold mb-4">Interpersonal Communication Skills 🗣️</h1>
               <div className="flex flex-wrap gap-3 mb-4">
                 <Badge variant="outline">Beginner</Badge>
                 <Badge variant="outline">6 Weeks</Badge>
@@ -45,7 +57,7 @@ const CommunicationRoadmap = () => {
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 Develop stronger relationships through effective interpersonal communication strategies, 
-                active listening, and emotional intelligence.
+                active listening, and emotional intelligence. 💬
               </p>
             </div>
             <div className="hidden md:block">
@@ -89,8 +101,20 @@ const CommunicationRoadmap = () => {
                 <div className="space-y-4">
                   <h3 className="font-medium">Related Roadmaps</h3>
                   <div className="flex flex-col space-y-2 text-sm">
-                    <Link to="/roadmaps/communication/public-speaking" className="text-muted-foreground hover:text-foreground">Public Speaking</Link>
-                    <Link to="/roadmaps/communication/negotiation" className="text-muted-foreground hover:text-foreground">Business Negotiation</Link>
+                    <Button 
+                      variant="ghost" 
+                      className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
+                      onClick={handleComingSoon}
+                    >
+                      Public Speaking 🎤
+                    </Button>
+                    <Button 
+                      variant="ghost" 
+                      className="justify-start p-0 h-auto text-muted-foreground hover:text-foreground"
+                      onClick={handleComingSoon}
+                    >
+                      Business Negotiation 🤝
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -108,7 +132,7 @@ const CommunicationRoadmap = () => {
                   <div className="space-y-16">
                     {/* Prerequisites */}
                     <div id="prerequisites" className="scroll-mt-20">
-                      <h2 className="text-2xl font-bold mb-6">Prerequisites</h2>
+                      <h2 className="text-2xl font-bold mb-6">Prerequisites 📋</h2>
                       <div className="space-y-6">
                         <div className="p-6 border rounded-lg bg-card">
                           <h3 className="text-lg font-medium mb-4">Before You Begin</h3>
@@ -116,21 +140,21 @@ const CommunicationRoadmap = () => {
                             <li className="flex gap-3">
                               <Check className="h-5 w-5 text-communication flex-shrink-0" />
                               <div>
-                                <p className="font-medium">Self-awareness</p>
+                                <p className="font-medium">Self-awareness 🧠</p>
                                 <p className="text-sm text-muted-foreground">Basic understanding of your own communication style and preferences.</p>
                               </div>
                             </li>
                             <li className="flex gap-3">
                               <Check className="h-5 w-5 text-communication flex-shrink-0" />
                               <div>
-                                <p className="font-medium">Motivation to improve</p>
+                                <p className="font-medium">Motivation to improve ⭐</p>
                                 <p className="text-sm text-muted-foreground">Willingness to practice and apply new communication techniques.</p>
                               </div>
                             </li>
                             <li className="flex gap-3">
                               <Check className="h-5 w-5 text-communication flex-shrink-0" />
                               <div>
-                                <p className="font-medium">Basic social skills</p>
+                                <p className="font-medium">Basic social skills 👋</p>
                                 <p className="text-sm text-muted-foreground">Fundamental understanding of social interactions and conversational norms.</p>
                               </div>
                             </li>
@@ -141,7 +165,7 @@ const CommunicationRoadmap = () => {
 
                     {/* Phase 1 */}
                     <div id="phase1" className="roadmap-container scroll-mt-20">
-                      <h2 className="text-2xl font-bold mb-6">Phase 1: Communication Foundations (Weeks 1-2)</h2>
+                      <h2 className="text-2xl font-bold mb-6">Phase 1: Communication Foundations (Weeks 1-2) 🌱</h2>
                       <div className="roadmap-line"></div>
                       
                       <div className="roadmap-item">
@@ -210,7 +234,7 @@ const CommunicationRoadmap = () => {
 
                     {/* Phase 2 */}
                     <div id="phase2" className="roadmap-container scroll-mt-20">
-                      <h2 className="text-2xl font-bold mb-6">Phase 2: Advanced Communication Skills (Weeks 3-4)</h2>
+                      <h2 className="text-2xl font-bold mb-6">Phase 2: Advanced Communication Skills (Weeks 3-4) 🚀</h2>
                       <div className="roadmap-line"></div>
                       
                       <div className="roadmap-item">
@@ -282,7 +306,7 @@ const CommunicationRoadmap = () => {
 
                     {/* Phase 3 */}
                     <div id="phase3" className="roadmap-container scroll-mt-20">
-                      <h2 className="text-2xl font-bold mb-6">Phase 3: Real-World Application (Weeks 5-6)</h2>
+                      <h2 className="text-2xl font-bold mb-6">Phase 3: Real-World Application (Weeks 5-6) 🌍</h2>
                       <div className="roadmap-line"></div>
                       
                       <div className="roadmap-item">
@@ -354,7 +378,7 @@ const CommunicationRoadmap = () => {
 
                     {/* Key Resources */}
                     <div id="resources" className="scroll-mt-20">
-                      <h2 className="text-2xl font-bold mb-6">Key Resources</h2>
+                      <h2 className="text-2xl font-bold mb-6">Key Resources 📚</h2>
                       <div className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div className="p-6 border rounded-lg bg-card">
