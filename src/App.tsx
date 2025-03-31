@@ -7,6 +7,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Roadmaps from "./pages/Roadmaps";
 import FinanceRoadmap from "./pages/FinanceRoadmap";
+import SalesRoadmap from "./pages/SalesRoadmap";
+import MarketingRoadmap from "./pages/MarketingRoadmap";
+import CommunicationRoadmap from "./pages/CommunicationRoadmap";
+import LanguagesRoadmap from "./pages/LanguagesRoadmap";
+import GermanRoadmap from "./pages/roadmaps/languages/GermanRoadmap";
+import FrenchRoadmap from "./pages/roadmaps/languages/FrenchRoadmap";
+import EnglishRoadmap from "./pages/roadmaps/languages/EnglishRoadmap";
 import Resources from "./pages/Resources";
 import Videos from "./pages/Videos";
 import FAQ from "./pages/FAQ";
@@ -24,6 +31,13 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/roadmaps" element={<Roadmaps />} />
           <Route path="/roadmaps/finance" element={<FinanceRoadmap />} />
+          <Route path="/roadmaps/sales" element={<SalesRoadmap />} />
+          <Route path="/roadmaps/marketing" element={<MarketingRoadmap />} />
+          <Route path="/roadmaps/communication" element={<CommunicationRoadmap />} />
+          <Route path="/roadmaps/languages" element={<LanguagesRoadmap />} />
+          <Route path="/roadmaps/languages/german" element={<GermanRoadmap />} />
+          <Route path="/roadmaps/languages/french" element={<FrenchRoadmap />} />
+          <Route path="/roadmaps/languages/english" element={<EnglishRoadmap />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/faq" element={<FAQ />} />
