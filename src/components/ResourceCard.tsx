@@ -2,13 +2,13 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Book, Video, Globe, FileText, Headphones } from 'lucide-react';
+import { Book, Video, Globe, FileText, Headphones, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ResourceCardProps {
   title: string;
   description: string;
-  type: 'book' | 'video' | 'article' | 'course' | 'podcast';
+  type: 'book' | 'video' | 'article' | 'course' | 'podcast' | 'tool';
   url: string;
   tags: string[];
 }
@@ -32,6 +32,8 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         return <Globe className="h-5 w-5" />;
       case 'podcast':
         return <Headphones className="h-5 w-5" />;
+      case 'tool':
+        return <Code className="h-5 w-5" />;
       default:
         return <FileText className="h-5 w-5" />;
     }
