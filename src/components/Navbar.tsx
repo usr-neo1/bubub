@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Globe, BarChart, Users, MessageSquare, Menu, X } from 'lucide-react';
+import { BookOpen, Globe, BarChart, Users, MessageSquare, Menu, X, Code } from 'lucide-react';
 import { 
   DropdownMenu,
   DropdownMenuContent,
@@ -65,6 +65,12 @@ const Navbar = () => {
                 <Link to="/roadmaps/communication" className="flex items-center gap-2 w-full">
                   <MessageSquare className="h-4 w-4 text-communication" />
                   <span>Communication</span>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/roadmaps/coding" className="flex items-center gap-2 w-full">
+                  <Code className="h-4 w-4 text-purple-500" />
+                  <span>Coding</span>
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -138,6 +144,14 @@ const Navbar = () => {
             >
               <MessageSquare className="h-4 w-4 text-communication" />
               <span>Communication</span>
+            </Link>
+            <Link 
+              to="/roadmaps/coding" 
+              className="flex items-center gap-2 p-2 rounded-md hover:bg-secondary"
+              onClick={toggleMenu}
+            >
+              <Code className="h-4 w-4 text-purple-500" />
+              <span>Coding</span>
             </Link>
 
             <div className="border-t my-2 pt-2">

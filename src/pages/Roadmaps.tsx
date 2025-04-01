@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import RoadmapCard from '@/components/RoadmapCard';
@@ -171,6 +172,38 @@ const Roadmaps = () => {
       estimatedTime: '4 weeks',
       slug: 'no-code/visual-builders',
     },
+    {
+      title: 'Web Development Fundamentals',
+      description: 'Learn the core technologies of web development including HTML, CSS, and JavaScript.',
+      category: 'coding',
+      difficulty: 'Beginner',
+      estimatedTime: '12 weeks',
+      slug: 'coding',
+    },
+    {
+      title: 'Full-Stack JavaScript',
+      description: 'Master both frontend and backend development using JavaScript and popular frameworks.',
+      category: 'coding',
+      difficulty: 'Intermediate',
+      estimatedTime: '16 weeks',
+      slug: 'coding/full-stack-js',
+    },
+    {
+      title: 'Python Programming',
+      description: 'Learn Python for data science, automation, web development, and more.',
+      category: 'coding',
+      difficulty: 'Beginner',
+      estimatedTime: '10 weeks',
+      slug: 'coding/python',
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Build native and cross-platform mobile applications for iOS and Android.',
+      category: 'coding',
+      difficulty: 'Intermediate',
+      estimatedTime: '14 weeks',
+      slug: 'coding/mobile',
+    },
   ];
 
   const filteredRoadmaps = roadmapsData.filter((roadmap) => {
@@ -189,7 +222,7 @@ const Roadmaps = () => {
           <h1 className="text-4xl font-bold mb-4">Learning Roadmaps</h1>
           <p className="text-xl text-muted-foreground mb-6">
             Discover structured learning paths to develop your skills in finance, 
-            sales, marketing, languages, communication, and no-code development.
+            sales, marketing, languages, communication, coding, and no-code development.
           </p>
           <div className="flex justify-center">
             <BookOpen className="h-16 w-16 text-primary opacity-75" />
@@ -224,6 +257,7 @@ const Roadmaps = () => {
                   <SelectItem value="marketing">Marketing</SelectItem>
                   <SelectItem value="languages">Languages</SelectItem>
                   <SelectItem value="communication">Communication</SelectItem>
+                  <SelectItem value="coding">Coding</SelectItem>
                   <SelectItem value="no-code">Vibe Coding</SelectItem>
                 </SelectContent>
               </Select>

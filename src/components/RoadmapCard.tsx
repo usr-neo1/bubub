@@ -35,7 +35,7 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
       case 'communication':
         return <MessageSquare className={`h-5 w-5 text-communication`} />;
       case 'coding':
-        return <Code className={`h-5 w-5 text-primary`} />;
+        return <Code className={`h-5 w-5 text-purple-500`} />;
       case 'no-code':
         return <Code className={`h-5 w-5 text-purple-500`} />;
       default:
@@ -56,7 +56,7 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
       case 'communication':
         return 'border-communication/20';
       case 'coding':
-        return 'border-primary/20';
+        return 'border-purple-500/20';
       case 'no-code':
         return 'border-purple-500/20';
       default:
