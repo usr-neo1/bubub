@@ -3,12 +3,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, BarChart, Globe, MessageSquare, Users } from 'lucide-react';
+import { ArrowRight, BarChart, Globe, MessageSquare, Users, Code } from 'lucide-react';
 
 interface RoadmapCardProps {
   title: string;
   description: string;
-  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication';
+  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication' | 'coding';
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   estimatedTime: string;
   slug: string;
@@ -34,6 +34,8 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
         return <Globe className={`h-5 w-5 text-languages`} />;
       case 'communication':
         return <MessageSquare className={`h-5 w-5 text-communication`} />;
+      case 'coding':
+        return <Code className={`h-5 w-5 text-primary`} />;
       default:
         return <BarChart className={`h-5 w-5 text-primary`} />;
     }
@@ -51,6 +53,8 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
         return 'border-languages/20';
       case 'communication':
         return 'border-communication/20';
+      case 'coding':
+        return 'border-primary/20';
       default:
         return 'border-primary/20';
     }
