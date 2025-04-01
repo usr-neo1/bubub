@@ -8,7 +8,7 @@ import { ArrowRight, BarChart, Globe, MessageSquare, Users, Code } from 'lucide-
 interface RoadmapCardProps {
   title: string;
   description: string;
-  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication' | 'coding';
+  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication' | 'coding' | 'no-code';
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   estimatedTime: string;
   slug: string;
@@ -36,6 +36,8 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
         return <MessageSquare className={`h-5 w-5 text-communication`} />;
       case 'coding':
         return <Code className={`h-5 w-5 text-primary`} />;
+      case 'no-code':
+        return <Code className={`h-5 w-5 text-purple-500`} />;
       default:
         return <BarChart className={`h-5 w-5 text-primary`} />;
     }
@@ -55,6 +57,8 @@ const RoadmapCard: React.FC<RoadmapCardProps> = ({
         return 'border-communication/20';
       case 'coding':
         return 'border-primary/20';
+      case 'no-code':
+        return 'border-purple-500/20';
       default:
         return 'border-primary/20';
     }

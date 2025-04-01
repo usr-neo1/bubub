@@ -17,6 +17,7 @@ import FrenchRoadmap from "./pages/roadmaps/languages/FrenchRoadmap";
 import EnglishRoadmap from "./pages/roadmaps/languages/EnglishRoadmap";
 import PublicSpeakingRoadmap from "./pages/roadmaps/communication/PublicSpeakingRoadmap";
 import BusinessNegotiationRoadmap from "./pages/roadmaps/communication/BusinessNegotiationRoadmap";
+import NoCodeRoadmap from "./pages/NoCodeRoadmap";
 import Resources from "./pages/Resources";
 import Videos from "./pages/Videos";
 import FAQ from "./pages/FAQ";
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/roadmaps/languages/german" element={<GermanRoadmap />} />
             <Route path="/roadmaps/languages/french" element={<FrenchRoadmap />} />
             <Route path="/roadmaps/languages/english" element={<EnglishRoadmap />} />
+            <Route path="/roadmaps/no-code" element={<NoCodeRoadmap />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/videos" element={<Videos />} />
             <Route path="/faq" element={<FAQ />} />

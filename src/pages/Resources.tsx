@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import ResourceCard from '@/components/ResourceCard';
@@ -11,13 +10,13 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
-import { FileText, Search, Code } from 'lucide-react';
+import { FileText, Search } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface ResourceData {
   title: string;
   description: string;
-  type: 'book' | 'video' | 'article' | 'course' | 'podcast' | 'tool';
+  type: 'book' | 'video' | 'article' | 'course' | 'podcast' | 'tool' | 'youtube';
   url: string;
   tags: string[];
   category: string;
@@ -241,61 +240,93 @@ const Resources = () => {
     
     // Coding Resources - New Category
     {
-      title: "Lovable AI App Builder",
+      title: "Complete No-Code App Development Course",
+      description: "Comprehensive guide to building powerful apps without writing a single line of code.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLYBQFgQmT3neTD6YBDfTc9sJXssBxOSPU",
+      tags: ["no-code", "app development", "beginners"],
+      category: "No-Code",
+    },
+    {
+      title: "Bubble.io From Zero to Hero",
+      description: "Learn to build complex web applications without coding using Bubble.io platform.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PL_qUNrDnD9XR4RKsO_IXB7CJB0QTWB5aZ",
+      tags: ["no-code", "bubble.io", "web apps"],
+      category: "No-Code",
+    },
+    {
+      title: "Webflow Complete Tutorial for Beginners",
+      description: "Learn to build professional websites without coding using Webflow's visual designer.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLvlPwwoX8YQuUONr4cCT7UXPLMHAbdVVj",
+      tags: ["no-code", "webflow", "website design"],
+      category: "No-Code",
+    },
+    {
+      title: "Airtable Masterclass for Beginners",
+      description: "Learn to build powerful databases and workflows without coding.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLADXPbxzNlYBw8U-5LelUiT7ew7dWVvtS",
+      tags: ["no-code", "airtable", "database"],
+      category: "No-Code",
+    },
+    {
+      title: "Zapier Automation Masterclass",
+      description: "Connect your apps and automate workflows without writing code.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLSWtiM5wpafG-8P7Z5N6wJUK81vNoHBSx",
+      tags: ["no-code", "automation", "zapier"],
+      category: "No-Code",
+    },
+    {
+      title: "AI-Powered Development with ChatGPT",
+      description: "Learn to use ChatGPT to accelerate your development workflow.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLAwi-SgvJx-PpKkERTvomqPYgNKxmGXca",
+      tags: ["AI", "ChatGPT", "development"],
+      category: "No-Code",
+    },
+    {
+      title: "Lovable AI App Builder Tutorial",
       description: "Build web applications using AI-assisted coding with React, Vite, and Tailwind CSS.",
-      type: "tool",
-      url: "https://lovable.dev/",
-      tags: ["coding", "AI", "web development", "no-code", "low-code"],
-      category: "Coding",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLV8-GUUMIAC7SnQqWz8nDj8WMTFGiJz5b",
+      tags: ["AI", "web development", "low-code"],
+      category: "No-Code",
     },
     {
-      title: "Bolt AI Code Generator",
-      description: "Generate and explain code snippets using AI for various programming tasks.",
-      type: "tool",
-      url: "https://github.com/features/copilot",
-      tags: ["coding", "AI", "code generator", "productivity"],
-      category: "Coding",
+      title: "GitHub Copilot & Bolt AI Masterclass",
+      description: "Learn to use AI coding assistants to accelerate your development workflow.",
+      type: "youtube",
+      url: "https://www.youtube.com/playlist?list=PLV8-GUUMIAy-5RWBM0vOI2HE7QAPXCDVO",
+      tags: ["AI", "copilot", "bolt", "code generation"],
+      category: "No-Code",
     },
     {
-      title: "Modern Web Development Fundamentals",
-      description: "Learn the core concepts of modern front-end development with React, Tailwind, and TypeScript.",
+      title: "Bubble.io Free Certification",
+      description: "Official free certification course from Bubble to learn no-code app development.",
       type: "course",
-      url: "https://frontendmasters.com/courses/web-development-v3/",
-      tags: ["coding", "web development", "react", "tailwind"],
-      category: "Coding",
+      url: "https://bubble.io/academy",
+      tags: ["no-code", "certification", "free", "bubble"],
+      category: "No-Code",
     },
     {
-      title: "Eloquent JavaScript",
-      description: "A modern introduction to JavaScript programming with practical exercises.",
-      type: "book",
-      url: "https://eloquentjavascript.net/",
-      tags: ["coding", "javascript", "free", "beginner"],
-      category: "Coding",
+      title: "HubSpot No-Code App Development Certification",
+      description: "Free certification course for building apps without coding on the HubSpot platform.",
+      type: "course",
+      url: "https://academy.hubspot.com/courses/app-development",
+      tags: ["no-code", "certification", "free", "hubspot"],
+      category: "No-Code",
     },
     {
-      title: "Design Patterns in JavaScript",
-      description: "Implementation of common design patterns using modern JavaScript features.",
-      type: "video",
-      url: "https://www.youtube.com/watch?v=BWprw8UHIzA",
-      tags: ["coding", "javascript", "design patterns", "architecture"],
-      category: "Coding",
-    },
-    {
-      title: "TypeScript Handbook",
-      description: "Official documentation and guide for learning TypeScript from the basics to advanced concepts.",
-      type: "article",
-      url: "https://www.typescriptlang.org/docs/handbook/",
-      tags: ["coding", "typescript", "documentation", "reference"],
-      category: "Coding",
-    },
-    {
-      title: "Web Development Roadmap 2023",
-      description: "Comprehensive guide to becoming a full-stack web developer with recommended learning paths.",
-      type: "article",
-      url: "https://roadmap.sh/frontend",
-      tags: ["coding", "career", "roadmap", "learning path"],
-      category: "Coding",
-    },
+      title: "Zapier Learn Free Certification",
+      description: "Free certification for mastering no-code automation with Zapier.",
+      type: "course",
+      url: "https://zapier.com/learn",
+      tags: ["no-code", "certification", "free", "automation"],
+      category: "No-Code",
+    }
   ];
 
   const filteredResources = resourcesData.filter((resource) => {
@@ -310,7 +341,7 @@ const Resources = () => {
 
   const popularTags = [
     "finance", "sales", "marketing", "german", "french", "english", 
-    "communication", "business", "coding", "AI", "web development"
+    "communication", "business", "no-code", "AI", "web development"
   ];
 
   return (
@@ -344,6 +375,7 @@ const Resources = () => {
                     <SelectItem value="course">Courses</SelectItem>
                     <SelectItem value="article">Articles</SelectItem>
                     <SelectItem value="video">Videos</SelectItem>
+                    <SelectItem value="youtube">YouTube Playlists</SelectItem>
                     <SelectItem value="podcast">Podcasts</SelectItem>
                     <SelectItem value="tool">Tools</SelectItem>
                   </SelectContent>
@@ -363,7 +395,7 @@ const Resources = () => {
                     <SelectItem value="marketing">Marketing</SelectItem>
                     <SelectItem value="languages">Languages</SelectItem>
                     <SelectItem value="communication">Communication</SelectItem>
-                    <SelectItem value="coding">Coding</SelectItem>
+                    <SelectItem value="no-code">Vibe Coding</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

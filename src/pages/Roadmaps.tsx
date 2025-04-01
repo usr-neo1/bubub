@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import RoadmapCard from '@/components/RoadmapCard';
@@ -16,7 +15,7 @@ import { BookOpen, Search } from 'lucide-react';
 interface RoadmapData {
   title: string;
   description: string;
-  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication';
+  category: 'finance' | 'sales' | 'marketing' | 'languages' | 'communication' | 'coding' | 'no-code';
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
   estimatedTime: string;
   slug: string;
@@ -148,6 +147,30 @@ const Roadmaps = () => {
       estimatedTime: '6 weeks',
       slug: 'communication',
     },
+    {
+      title: 'Vibe Coding Mastery',
+      description: 'Learn to build applications without traditional coding using visual builders and AI tools.',
+      category: 'no-code',
+      difficulty: 'Beginner',
+      estimatedTime: '6 weeks',
+      slug: 'no-code',
+    },
+    {
+      title: 'AI-Assisted Development',
+      description: 'Master the art of using AI tools to accelerate your development workflow.',
+      category: 'no-code',
+      difficulty: 'Intermediate',
+      estimatedTime: '8 weeks',
+      slug: 'no-code/ai-assisted',
+    },
+    {
+      title: 'Visual App Builders',
+      description: 'Create functional web and mobile apps using drag-and-drop interfaces and visual builders.',
+      category: 'no-code',
+      difficulty: 'Beginner',
+      estimatedTime: '4 weeks',
+      slug: 'no-code/visual-builders',
+    },
   ];
 
   const filteredRoadmaps = roadmapsData.filter((roadmap) => {
@@ -166,7 +189,7 @@ const Roadmaps = () => {
           <h1 className="text-4xl font-bold mb-4">Learning Roadmaps</h1>
           <p className="text-xl text-muted-foreground mb-6">
             Discover structured learning paths to develop your skills in finance, 
-            sales, marketing, languages, and communication.
+            sales, marketing, languages, communication, and no-code development.
           </p>
           <div className="flex justify-center">
             <BookOpen className="h-16 w-16 text-primary opacity-75" />
@@ -201,6 +224,7 @@ const Roadmaps = () => {
                   <SelectItem value="marketing">Marketing</SelectItem>
                   <SelectItem value="languages">Languages</SelectItem>
                   <SelectItem value="communication">Communication</SelectItem>
+                  <SelectItem value="no-code">Vibe Coding</SelectItem>
                 </SelectContent>
               </Select>
             </div>

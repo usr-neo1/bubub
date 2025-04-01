@@ -2,13 +2,13 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Book, Video, Globe, FileText, Headphones, Code } from 'lucide-react';
+import { Book, Video, Globe, FileText, Headphones, Code, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ResourceCardProps {
   title: string;
   description: string;
-  type: 'book' | 'video' | 'article' | 'course' | 'podcast' | 'tool';
+  type: 'book' | 'video' | 'article' | 'course' | 'podcast' | 'tool' | 'youtube';
   url: string;
   tags: string[];
 }
@@ -26,6 +26,8 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         return <Book className="h-5 w-5" />;
       case 'video':
         return <Video className="h-5 w-5" />;
+      case 'youtube':
+        return <Youtube className="h-5 w-5 text-red-500" />;
       case 'article':
         return <FileText className="h-5 w-5" />;
       case 'course':
@@ -36,6 +38,17 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         return <Code className="h-5 w-5" />;
       default:
         return <FileText className="h-5 w-5" />;
+    }
+  };
+
+  const getButtonText = () => {
+    switch (type) {
+      case 'youtube':
+        return 'Watch Playlist';
+      case 'course':
+        return 'Start Course';
+      default:
+        return 'Visit Resource';
     }
   };
 
@@ -64,7 +77,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
       </CardContent>
       <CardFooter>
         <a href={url} target="_blank" rel="noopener noreferrer" className="w-full">
-          <Button className="w-full">Visit Resource</Button>
+          <Button className="w-full">{getButtonText()}</Button>
         </a>
       </CardFooter>
     </Card>
